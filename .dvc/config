@@ -1,0 +1,5 @@
+[core]
+    remote = wasabi
+['remote "wasabi"']
+    url = s3://toy-xp-versioning
+    endpointurl = https://s3.eu-central-1.wasabisys.com

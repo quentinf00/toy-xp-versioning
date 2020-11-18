@@ -1,0 +1,3 @@
+outs:
+- md5: dd6088032152b0058ec49bc78ebba000
+  path: target.npy
