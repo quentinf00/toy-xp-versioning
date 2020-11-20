@@ -15,20 +15,35 @@ def f(x, y, z):
     return x * (inp ** 2) + y * inp + z
 
 
-# %% Script entry point
-if __name__ == '__main__':
-    # %% Script entry point
-    ## Compute out
-    out = f(a, b, c)
+# # %% Script entry point
+# if __name__ == '__main__':
+#     # %% Script entry point
+#     ## Compute out
+#     out = f(a, b, c)
 
-    ## Dump out.npy
-    np.save('out', out)
+#     ## Dump out.npy
+#     np.save('out', out)
 
-    ## Compute Score
-    assert Path('target.npy').exists(), \
-        'Have you followed the installation instruction ? (Try running "dvc pull && dvc checkout")'
+#     ## Compute Score
+#     assert Path('target.npy').exists(), \
+#         'Have you followed the installation instruction ? (Try running "dvc pull && dvc checkout")'
 
-    square_err = np.mean((np.load('target.npy') - out) ** 2)
+#     square_err = np.mean((np.load('target.npy') - out) ** 2)
 
-    ## Write square_err.metric
-    Path('square_err.metric').write_text(f"{square_err}\n")
+#     ## Write square_err.metric
+#     Path('square_err.metric').write_text(f"{square_err}\n")
+
+# %%
+out = f(a, b, c)
+
+## Dump out.npy
+np.save('out', out)
+
+## Compute Score
+assert Path('target.npy').exists(), \
+    'Have you followed the installation instruction ? (Try running "dvc pull && dvc checkout")'
+
+square_err = np.mean((np.load('target.npy') - out) ** 2)
+
+## Write square_err.metric
+Path('square_err.metric').write_text(f"{square_err}\n")
