@@ -1,3 +1,4 @@
 outs:
-- md5: 08aabdebb7651a02e166afc90c46d543
+- md5: b9fd73e05d8d77f612d964d5fe400b79
   path: out.npy
+  size: 1728
