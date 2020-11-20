@@ -6,7 +6,7 @@ import numpy as np
 # %% Change the parameters' values of the xp
 a = 2
 b = -1
-c = 10  
+c = 10
 
 
 # %% Do not change BELOW ###

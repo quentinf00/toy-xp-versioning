@@ -11,7 +11,7 @@ Toy example repo of experiment versioning
 
 - Clone the repo :
 ```
-git clone https://github.com/quentinf00/toy-xp-versioning.git
+git clone git@github.com:quentinf00/toy-xp-versioning.git
 cd toy-xp-versioning
 ```
 
@@ -124,7 +124,7 @@ python xp.py
 - load all experiments in sandbox
 
 ```
-bash ./sandbox/load_all_xp_results
+bash sandbox/load_all_xp_results.sh
 ```
 
 - start the viz :
