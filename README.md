@@ -1,13 +1,13 @@
 # toy-xp-versioning
 Toy example repo of experiment versioning
 
-
-## Installation
-
-**Requirements**
+## Requirements
 
 - git: see installation instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - conda: see installation instructions [here](https://docs.conda.io/en/latest/miniconda.html) 
+
+
+## Installation
 
 - Clone the repo :
 ```
@@ -43,7 +43,8 @@ dvc checkout
 
 - This project aims to illustrate an experiment versioning workflow using git and dvc
 
-- Experiment description : Find the parameters a, b and c that minimize the mean squared  error of a function f wrt a target
+- Experiment description : Find the parameters a, b and c that minimize the mean squared error of a function f wrt a target
+![](visualization.png)
 
 - Directory structure :
 ```
@@ -69,12 +70,13 @@ env.yaml    ## conda environment definition
 
 
 ## %% Others
-sandbox/   ## ignored folder useful for files that should not be versioned with git
+sandbox/   ## folder with utils to visualize the different expériments
 .idea/     ## ide configuration (can be ignored)
 ``` 
 
 
 ## Run an experiment
+
 - Switch to a new git branch (you can put your name instead of `$(whomai)`):
 ```
 git checkout -b $(whoami)
@@ -113,6 +115,20 @@ python xp.py
 1) upload your data files 
 ```dvc push```
 1) upload your code 
-```git push```
+```git push origin $(git branch --show-current)```
 
 (run `git status` to see that `out.npy.dvc` has been updated)
+
+## Compare different experiments :
+
+- load all experiments in sandbox
+
+```
+bash ./sandbox/load_all_xp_results
+```
+
+- start the viz :
+
+```
+streamlit run sandbox/plot_xp.py 
+```
