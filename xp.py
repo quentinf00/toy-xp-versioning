@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 
 # %% Change the parameters' values of the xp
-a = 2
+a = 4
 b = -1
 c = 10
 
